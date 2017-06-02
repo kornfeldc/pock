@@ -1,0 +1,37 @@
+/* Variables */
+/*fatnav override*/
+.fat-nav {
+  background: rgba(0, 0, 0, 0.98);
+}
+.hamburger__icon {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.hamburger:not(.active) {
+  /*background:fade(@color_bg,80%);*/
+}
+.hamburger .hamburger__icon,
+.hamburger .hamburger__icon:before,
+.hamburger .hamburger__icon:after {
+  background-color: #FAF911;
+}
+.hamburger.active .hamburger__icon {
+  background: rgba(0, 0, 0, 0.98);
+}
+.hamburger.active .hamburger__icon:before,
+.hamburger.active .hamburger__icon:after {
+  background-color: #FAF911;
+}
+@media (max-width: 800px) {
+  .fat-nav li {
+    padding: 2px;
+  }
+}
+.fat-nav li a {
+  font-size: 18pt !important;
+}
+@media (min-width: 800px) {
+  .fat-nav li a {
+    font-size: 24pt !important;
+  }
+}

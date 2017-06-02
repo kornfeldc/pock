@@ -1,0 +1,43 @@
+@import "variables";
+/*fatnav override*/
+.fat-nav {
+    background: @color_navbg;
+}
+
+.hamburger__icon {
+    margin-top: 20px;
+    margin-left:20px;
+}
+
+.hamburger:not(.active) {
+    /*background:fade(@color_bg,80%);*/  
+}
+
+.hamburger .hamburger__icon, 
+.hamburger .hamburger__icon:before, 
+.hamburger .hamburger__icon:after {
+    background-color: @color_accent;
+}
+
+.hamburger.active .hamburger__icon {
+    background: @color_navbg;
+}
+
+.hamburger.active .hamburger__icon:before, 
+.hamburger.active .hamburger__icon:after {
+    background-color:@color_accent;
+}
+
+.fat-nav li {
+
+    @media (max-width:@breakpoint_small) {
+        padding:2px;
+    }
+
+    a {
+        font-size:@fontsize_nav_small !important;
+        @media (min-width:@breakpoint_small)  {
+            font-size:@fontsize_nav !important;
+        }
+    }
+}

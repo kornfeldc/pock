@@ -1,0 +1,44 @@
+/* Variables */
+#me > div {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#me > div > div {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 50px;
+}
+#me img {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+#me .subheader {
+  display: inline-block;
+  padding-top: 20px;
+}
+#me ul li,
+#me ul i {
+  padding-top: 10px;
+}
+@media (max-width: 800px) {
+  #me table tbody,
+  #me table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  #me table tr:not(:last-child) {
+    padding-bottom: 15px;
+  }
+}
+#me table tr td {
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+#me table tr td:first-child {
+  padding-right: 10px;
+  white-space: nowrap;
+}
