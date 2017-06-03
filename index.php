@@ -114,8 +114,8 @@
 							<div class="description" v-html="section.description"></div>
 
 							<div class="gallery">
-								<a v-for="(img,index) in section.gallery" v-bind:rel="'gal-'+section.id" v-bind:href="img.src" v-bind:title="img.title" class="swipebox">
-									<div v-bind:style="'background-image:url('+img.thumb+');'"></div>
+								<a v-for="(title,index) in section.gallery.titles" v-bind:rel="'gal-'+section.id" v-bind:href="section.gallery.path + '/' + (index+1) + '.jpg'" v-bind:title="title" class="swipebox">
+									<div v-bind:style="'background-image:url('+section.gallery.path + '/' + (index+1) + '.jpg'+');'"></div>
 								</a>
 							</div>
 
