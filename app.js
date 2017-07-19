@@ -17,48 +17,48 @@ new Vue({
         ],
         slides:[
             { 
-                bg: "img/start/sw_start.png", 
+                bg: "img/start/sw_start", 
                 img: "img/logo.png",
                 menu: "start",
                 imgStyle: "border-bottom: solid 3px yellow;" 
             },
             {
-                bg: "img/start/sw_aluminium.png",
+                bg: "img/start/sw_aluminium",
                 menu: "aluminium",
                 title: "Aluminium"
             },
             {
-                bg: "img/start/sw_edelstahl.png",
+                bg: "img/start/sw_edelstahl",
                 menu: "edelstahl",
                 title: "Edelstahl"
             },
             {
-                bg: "img/start/sw_fahrzeugmod.png",
+                bg: "img/start/sw_fahrzeugmod",
                 menu: "fahrzeugmod",
                 title: "Fahrzeug Modifizierung"
             },
             {
-                bg: "img/start/sw_laserschnitt.png",
+                bg: "img/start/sw_laserschnitt",
                 menu: "laserschnitt",
                 title: "Laserschnitt"
             },
             {
-                bg: "img/start/sw_pulverbeschichtung.png",
+                bg: "img/start/sw_pulverbeschichtung",
                 menu: "pulverbeschichtung",
                 title: "Pulver<wbr>beschichtung"
             },
             {
-                bg: "img/start/sw_restaurationen.png",
+                bg: "img/start/sw_restaurationen",
                 menu: "restaurationen",
                 title: "Restaurationen"
             },
             {
-                bg: "img/start/sw_unterkonstruktionen.png",
+                bg: "img/start/sw_unterkonstruktionen",
                 menu: "unterkonstruktionen",
                 title: "Unter<wbr>konstruktionen"
             },
             {
-                bg: "img/start/sw_sonderanfertigungen.png",
+                bg: "img/start/sw_sonderanfertigungen",
                 menu: "sonderanfertigungen",
                 title: "Sonder<wbr>anfertigungen"
             }
@@ -73,19 +73,19 @@ new Vue({
             birthday: "22.09.1975",
             jobheader: "Berufsausbildung",
             jobs: [
-                { timespan: "1991-1995", title: "Lehrlingsausbildung zum Werkzeugmacher Fa. WFK" },
-                { timespan: "1995", title: "Lehrabschlussprüfung" },
-                { timespan: "1995-2005", title: "Facharbeiter, Werkzeugmacher, Fa. WFK" },
-                { timespan: "2005-2010", title: "Facharbeiter, Werkzeugmacher, Fa. Proform Prototypen" },
-                { timespan: "2010-2011", title: "Techniker, Fa. Family Park Neusiedlersee" },
-                { timespan: "2011-", title: "Selbstständigkeit" },
-                { timespan: "2012-", title: "Ausbildung zum Fachtrainer / ABT-AusbilderInnentraining im BFI " },
-                { timespan: "2016", title: "Meisterprüfung Metalltechnik" },
                 { timespan: "2016", title: "Prüfungstätikeit WKO Wifi-Eisenstadt im Bereich LAP - Metalltechnik" },
+                { timespan: "2016", title: "Meisterprüfung Metalltechnik" },
+                { timespan: "2012-", title: "Ausbildung zum Fachtrainer / ABT-AusbilderInnentraining im BFI " },
+                { timespan: "2011-", title: "Selbstständigkeit" },
+                { timespan: "2010-2011", title: "Techniker, Fa. Family Park Neusiedlersee" },
+                { timespan: "2005-2010", title: "Facharbeiter, Werkzeugmacher, Fa. Proform Prototypen" },
+                { timespan: "1995-2005", title: "Facharbeiter, Werkzeugmacher, Fa. WFK" },
+                { timespan: "1995", title: "Lehrabschlussprüfung" },
+                { timespan: "1991-1995", title: "Lehrlingsausbildung zum Werkzeugmacher Fa. WFK" }
             ],
             contactheader: "Kontakt",
             contact: {
-                adress: "Schulgasse 9, 7062 St. Margarethen",
+                adress: "<i class='fa-li fa fa-map-marker'></i>Schulgasse 9<br/>7062 St. Margarethen",
                 phone: "0664/1218967",
                 email: "mail@metalldesignpock.at"
             }
@@ -468,11 +468,23 @@ new Vue({
         var app = this;
         this.$nextTick(()=>{
             $('.swipebox').swipebox();
+
+            if(app.menu != "start") {
+                $("html").css("overflow","auto");
+                $("body").addClass("scroll");
+            }
+            else 
+                $("body").removeClass("scroll");
         });
     },
     methods: {
         nextPage: function() {
             $.fn.fullpage.moveSectionDown();
+        },
+        getStartImageExtenstion: function() {
+            if($(window).width() < 800)
+                return "_small.png";
+            return ".png";
         }
     }
 });

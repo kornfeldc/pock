@@ -60,7 +60,7 @@
 			<div id="bar" v-if="menu!='start'"><img src="img/logo.png"/></div>
 
 			<div id="start" v-bind:style="menu != 'start' ? 'display:none' : ''">
-				<a v-for="(slide,index) in slides" class="section" v-bind:style="'background-image:url('+slide.bg+');'" v-bind:href="'#'+slide.menu">
+				<a v-for="(slide,index) in slides" class="section" v-bind:style="'background-image:url('+slide.bg + getStartImageExtenstion() +');'" v-bind:href="'#'+slide.menu">
 					<div v-bind:class="'slide_content '+index!=0?'card':''" class="slide_content" v-bind:style="slide.contentStyle">
 						<div v-if="slide.img" class="imgcontainer"><img v-bind:src="slide.img" v-bind:style="slide.imgStyle"/></div>
 						<div v-if="slide.title" class="title" v-html="slide.title"></div>
@@ -82,6 +82,13 @@
 							<img v-bind:src="me.img.thumb" alt="image"/>
 						</a>
 						
+						<h21 class="subheader">{{me.contactheader}}</h21>
+						<ul class="fa-ul">
+							<li v-html="me.contact.adress"></li>
+							<li><i class="fa-li fa fa-phone"></i>{{me.contact.phone}}</li>
+							<li><i class="fa-li fa fa-envelope-o"></i>{{me.contact.email}}</li>
+						</ul>
+
 						<h21 class="subheader">{{me.jobheader}}</h21>
 
 						<table>
@@ -90,13 +97,6 @@
 								<td>{{job.title}}</td>
 							</tr>
 						</table>
-
-						<h21 class="subheader">{{me.contactheader}}</h21>
-						<ul class="fa-ul">
-							<li><i class="fa-li fa fa-map-marker"></i>{{me.contact.adress}}</li>
-							<li><i class="fa-li fa fa-phone"></i>{{me.contact.phone}}</li>
-							<li><i class="fa-li fa fa-envelope-o"></i>{{me.contact.email}}</li>
-						</ul>
 
 					</div>
 				</div>
