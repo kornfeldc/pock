@@ -470,11 +470,14 @@ new Vue({
             $('.swipebox').swipebox();
 
             if(app.menu != "start") {
-                $("html").css("overflow","auto");
-                $("body").addClass("scroll");
+                //$('#start').fullpage("destroy","all");
+                $.fn.fullpage.destroy('all');
+                //$("html").removeClass("fp-enabled");
             }
-            else 
-                $("body").removeClass("scroll");
+            else { 
+                //$("html").addClass("fp-enabled");
+                $('#start').fullpage();
+            }
         });
     },
     methods: {

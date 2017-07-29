@@ -128,5 +128,5 @@
 
 		</div>
     </body>
-	<script src="app.js" type="text/javascript"></script>
+	<script src="app.js?12" type="text/javascript"></script>
 </html>
