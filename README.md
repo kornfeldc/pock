@@ -1,3 +1,3 @@
 # Metalldesign POCK
 
-http://www.metalldesignpock.at/v3/
+http://www.metalldesignpock.at/
