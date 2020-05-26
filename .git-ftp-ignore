@@ -1,0 +1,6 @@
+.github/*
+.gitignore
+.git-ftp.log
+.git-ftp-ignore
+pock.code-workspace
+README.md
