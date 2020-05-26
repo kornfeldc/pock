@@ -42,6 +42,7 @@
 		<link href="css/fatnav.css" rel="stylesheet"/>
 		<link href="css/start.css" rel="stylesheet"/>
 		<link href="css/me.css" rel="stylesheet"/>
+		<link href="css/impressum.css" rel="stylesheet"/>
 
     </head>
 	<body>
@@ -98,6 +99,19 @@
 							</tr>
 						</table>
 
+					</div>
+				</div>
+			</div>
+
+			<!-- ------------------------------- Impressum ------------------------------- -->
+			<div id="impressum" class="content" v-bind:style="menu != 'impressum' ? 'display:none' : ''">
+				<div>
+					<div class="card">
+						<div class="header bordered"><h20>{{impressum.header}}</h20></div>
+						<template v-for="section in impressum.sections">
+							<div><h21 class="subheader">{{section.header}}</h21></div>
+							<div v-for="line in section.lines">{{line}}</div>
+						</template>
 					</div>
 				</div>
 			</div>

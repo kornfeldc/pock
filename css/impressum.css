@@ -1,0 +1,39 @@
+/* Variables */
+#impressum > div {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#impressum > div > div {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 50px;
+}
+#impressum .subheader {
+  display: inline-block;
+  padding-top: 20px;
+}
+#impressum ul li,
+#impressum ul i {
+  padding-top: 10px;
+}
+@media (max-width: 800px) {
+  #impressum table tbody,
+  #impressum table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  #impressum table tr:not(:last-child) {
+    padding-bottom: 15px;
+  }
+}
+#impressum table tr td {
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+#impressum table tr td:first-child {
+  padding-right: 10px;
+  white-space: nowrap;
+}

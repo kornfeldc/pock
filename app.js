@@ -5,6 +5,7 @@ new Vue({
         navigation: [
             { menu:"start", title: "Start" },
             { menu:"uebermich", title: "Über mich"},
+            { menu:"impressum", title: "Impressum"},
             { split: true },
             { menu:"aluminium", title: "Aluminium" },
             { menu:"edelstahl", title: "Edelstahl" },
@@ -89,6 +90,27 @@ new Vue({
                 phone: "0664/1218967",
                 email: "mail@metalldesignpock.at"
             }
+        },
+        impressum: {
+            header: "Impressum",
+            sections: [
+                {
+                    header:"Bernhard Pock",
+                    lines:["Schulgasse 9", "7062 St. Margarethen im Burgenland"]
+                },
+                {
+                    header:"UID-Nummer",
+                    lines:["ATU66772977"]
+                },
+                {
+                    header:"Beginndatum der Rechtsform",
+                    lines:["11.03.2011"]
+                },
+                {
+                    header:"Handelnde Personen",
+                    lines:["Inhaber:","Herr Pock Bernhard", "Privatperson"]
+                }
+            ]
         },
         projects: [
             {
